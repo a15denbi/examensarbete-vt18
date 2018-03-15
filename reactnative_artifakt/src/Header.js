@@ -5,24 +5,35 @@
 //  Created by Dennis Bilberg on 2018-03-15.
 //  Copyright © 2018 Dennis Bilberg. All rights reserved.
 //
-
-import React, { Component } from 'react';
+import React from 'react';
 import { View, Text } from 'react-native';
 
-class Header extends Component {
-  render() {
-    return (
-      <View style={styles.header}>
-        <Text>Header Component</Text>
-      </View>
-    );
-  }
-}
+const Header = (props) => {
+  const { viewStyle, textStyle } = styles;
+
+  return (
+    <View style={viewStyle}>
+      <Text style={textStyle}>{props.headerText}</Text>
+    </View>
+  );
+};
 
 const styles = {
-  header: {
-    height: 100,
-    width: 100    
+  viewStyle: {
+    backgroundColor: '#1a98fc',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 65,
+    paddingTop: 15,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    elevation: 2,
+    position: 'relative'
+  },
+  textStyle: {
+    fontSize: 24,
+    color: '#fff'
   }
 };
 
