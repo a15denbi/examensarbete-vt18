@@ -1,0 +1,10 @@
+[
+  {
+    "DATA" : {
+      "title": "Santorini",
+      "image": "../assets/greece1.jpeg"
+    },  
+      "title": "London",
+      "image": "../assets/london1.jpeg"
+  }
+]
