@@ -32,7 +32,8 @@ const styles = {
     position: 'relative'
   },
   textStyle: {
-    fontSize: 24,
+    fontSize: 21,
+    fontWeight: 'bold',
     color: '#fff'
   }
 };
