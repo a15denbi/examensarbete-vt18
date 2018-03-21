@@ -6,42 +6,26 @@
 //  Copyright © 2018 Dennis Bilberg. All rights reserved.
 //
 import React from 'react';
-import { StyleSheet, View, Text, Image } from 'react-native';
-import { FlatList } from 'react-native-gesture-handler';
+import { StyleSheet, View, ImageBackground, Text } from 'react-native';
 import Header from './src/Header';
 import SelectText from './src/SelectText';
-import ListItem from './src/ListItem';
 
-// The dataArrayList
-// const cards = [
-//   { id: "0", title: "Santorini", picture: require('./assets/greece1.jpeg'), content: <Text>Greece pic</Text> },
-//   { id: "1", title: "London", picture: require('./assets/london1.jpeg'), content: <Text>Big Ben</Text> },
-//   { id: "2", title: "Paris", picture: require('./assets/paris1.jpg'), content: <Text>Mona Lisa</Text> },  
-// ];
-
-// the lifecycle
+// the lifecycle method
 export default class App extends React.Component {
   render() {
-    return (
-      //style={styles.container} i view
+    return (      
       <View>
-        <Header headerText={'Travel Buddy'} />  
+        <Header headerText={'Travel Buddy'} />
         <SelectText />
-        <FlatList 
-          data={[
-            require('./assets/greece1.jpeg'),
-            require('./assets/london1.jpeg'),
-            require('./assets/paris1.jpg'),
-          ]}
-          renderItem={({ item }) => {
-            return <ListItem image={item} />
-          }}
-          keyExtractor={
-            (index) => {
-              return index
-            }
-          }
-        />
+        <ImageBackground style={styles.container} source={require('./assets/santorini.jpg')}>
+          <Text style={styles.textStyle}>Santorini</Text>
+        </ImageBackground>
+        <ImageBackground style={styles.container} source={require('./assets/london.jpg')}>
+          <Text style={styles.textStyle}>London</Text>
+        </ImageBackground>
+        <ImageBackground style={styles.container} source={require('./assets/paris.jpg')}>
+          <Text style={styles.textStyle}>Paris</Text>
+        </ImageBackground>
       </View>
     );
   }
@@ -49,9 +33,14 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
+    height: 120,
+    width: null,
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    justifyContent: 'center'
   },
+  textStyle: {
+    fontSize: 26,
+    color: '#fff',
+    fontWeight: 'bold'
+  }
 });
