@@ -1,0 +1,14 @@
+[
+    {
+      "title": "Santorini",
+      "image": "https://github.com/a15denbi/examensarbete-vt18/blob/master/reactnative_artifakt/assets/greece1.jpeg?raw=true"
+    }, 
+    {
+      "title": "London",
+      "image": "https://raw.githubusercontent.com/a15denbi/examensarbete-vt18/master/reactnative_artifakt/assets/london1.jpeg"
+    },
+    {
+      "title": "Paris",
+      "image": "https://github.com/a15denbi/examensarbete-vt18/blob/master/reactnative_artifakt/assets/paris1.jpg?raw=true"
+    }
+]
